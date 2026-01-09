@@ -34,8 +34,9 @@ android {
         abortOnError false
     }
 
-    aaptOptions {
-        noCompress = **STREAMING_ASSETS**
+    androidResources {
+        noCompress = **STREAMING_ASSETS** + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:!CVS:!thumbs.db:!picasa.ini:!*~"
     }**SIGN**
 
     buildTypes {
