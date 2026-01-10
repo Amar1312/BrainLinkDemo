@@ -56,4 +56,15 @@ android {
         }
     }**PACKAGING_OPTIONS****SPLITS**
 **BUILT_APK_LOCATION**
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+    }
 }**SPLITS_VERSION_CODE****SOURCE_BUILD_SETUP**
